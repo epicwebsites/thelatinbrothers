@@ -677,3 +677,40 @@ footer .divide20 {
   color: #fff;
   background-color: #00aa5b;
 }
+#extra-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#extra-info span {
+  display: block;
+  padding: 3px 12px;
+  font-size: 0.875rem;
+}
+#extra-info a {
+  text-decoration: underline;
+}
+
+#btn-comprar {
+  position: absolute;
+  left: 50%;
+  color: #fff;
+  background: #00aa5b;
+  padding: 3px 12px;
+  margin-top: 20px;
+  border: 2px solid #00aa5b;
+  border-radius: 10px;
+  height: 44px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in;
+}
+
+#btn-comprar:hover {
+  opacity: 0.8;
+}
