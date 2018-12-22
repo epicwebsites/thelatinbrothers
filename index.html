@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIM | Docentes</title>
+    <link rel="shorcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/UNI.svg/1200px-UNI.svg.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <section class="navigation navigation-top default">
+    <div class="container">
+      <div class="brand"><a href="{{path('home')}}"></a></div>
+      <nav class="nav-top">
+        <div class="nav-mobile"><a class="nav-toggle" href="#!"><span></span></a></div>
+        <ul class="first-level-ul nav-list">
+          <li><a href="#!">Home</a></li>
+          <li><a href="#!">About</a></li>
+          <li class="first-level-li"><a href="#!">Services<span class="caret"></span></a>
+            <ul class="second-level-ul nav-dropdown">
+              <li><a href="#!">Web Design</a></li>
+              <li><a href="#!">Wen Development</a></li>
+              <li><a href="#!">Graphic Design</a></li>
+            </ul>
+          </li>
+          <li><a href="#!">Pricing</a></li>
+          <li class="first-level-li"><a href="#!">Portofolio<span class="caret"></span></a>
+            <ul class="second-level-ul nav-dropdown">
+              <li><a href="#!">Web Design</a></li>
+              <li><a href="#!">Web Development</a></li>
+              <li><a href="#!">Graphic Design</a></li>
+            </ul>
+          </li>
+          <li><a href="#!">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="navigation navigation-sub">
+    <div class="container">
+      <nav class="nav-sub">
+        <div id="menu-bar">
+          <div id="buscador">
+            <input class="form-control mysearchinput" id="mysearchinput" type="text" placeholder="{{ 'label.what_you_look'|trans }}"/><a class="pull-right"><i class="glyphicon glyphicon-search"></i></a>
+          </div>
+          <div class="nav-mobile"><a id="nav-toggle2" href="#!"><span></span></a></div>
+          <ul class="nav-list">
+            <li class="pull-right"><a class="pull-right"><span class="caret"></span></a>
+              <ul class="nav-dropdown dropdown-menu-right"></ul>
+            </li>
+            <li class="pull-right">
+              <ul class="update-cart-menu" style="list-style: none;">{{ render(controller('AppBundle:Cart:menu')) }}</ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <div class="fas fa-shopping-basket" id="canasta"></div>
+  <div id="modal-bag">
+    <div id="modal-bag-box">
+      <div id="modal-bag-box2">
+        <div id="modal-bag-box3">
+          <div id="modal-bag-h">
+            <div id="modal-bag-title"><span class="span-item">My bag,</span><span>5 items</span></div>
+            <div id="modal-bag-close"><span>&times;</span></div>
+          </div>
+          <div id="modal-bag-m"><a><img class="product-img" src="https://images.asos-media.com/products/nike-hypercharge-straw-black-water-bottle/9021121-1-black?$l$" alt="Black Water Bottle"/>
+              <dl>
+                <dd class="product-price">$26.84</dd>
+                <dd>Nike Hypercharge Straw Black Water Bottle</dd>
+                <div class="product-info">
+                  <dd>Black</dd>
+                  <dd>No Size</dd>
+                  <dd>Qty: 5</dd>
+                </div>
+              </dl>
+              <button class="delete-item"><i class="far fa-trash-alt"></i></button></a></div>
+          <div id="modal-bag-f">
+            <div id="sub-total"><span>Sub-total</span><span>$26.84</span></div>
+            <div id="buttons"><a class="product-action" id="view-bag">View Bag</a><a class="product-action" id="checkout">Checkout</a></div>
+            <div id="extra-info"><span>Free Delivery WorlWide*</span><span>More info <a>here</a></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
