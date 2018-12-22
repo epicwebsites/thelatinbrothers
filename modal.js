@@ -11,6 +11,8 @@ function ToggleModal(){
     .mouseleave(HideModal)
   closeModal
     .click(HideModal)
+  onbuyModal
+    .click(TemporalModal)
   //  Apply functions
   function ShowModal(){
     openModal.addClass('modal-visible')
