@@ -1,0 +1,2 @@
+Archivo necesario para crear la carpeta "inspectionProfiles" en Github
+Feel free to delete it
