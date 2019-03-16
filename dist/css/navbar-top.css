@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* -------------------------
+		NAVEGACIÓN SECCIÓN 1
+	 ------------------------- */
+.navigation-top {
+  background: #222;
+  z-index: 100;
+}
+
+.navigation-top .container {
+  /* Necesario para que el logo y el menú principal se alinen de extremo a extremo */
+  /* Logo THELATINBROTHERS */
+  /* Menú Principal */
+}
+
+.navigation-top .container::before, .navigation-top .container::after {
+  display: none;
+}
+
+.navigation-top .container .brand {
+  min-width: 240px;
+  width: 240px;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  z-index: 3;
+  float: left;
+  /* PUNTO 2 */
+  /*float: unset;*/
+  line-height: unset;
+  text-transform: unset;
+  font-size: unset;
+}
+
+.navigation-top .container .brand a {
+  display: inline-block;
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.navigation-top .container .brand a, .navigation-top .container .brand a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation-top .container .brand a img {
+  width: 100%;
+  padding-top: unset;
+}
+
+.navigation-top .container .nav-top {
+  padding: 0;
+  /* Quita la transición al momento de pasar de 798 a 799px (Puede afectar visualmente
+		  al cambiar la orientación en tablets de gran tamaño) */
+}
+
+.navigation-top .container .nav-top .nav-mobile {
+  width: 70px;
+  /* PUNTO 3 */
+  width: unset;
+  height: unset;
+  padding: 12px 15px;
+  background: #222;
+  z-index: 2;
+}
+
+.navigation-top .container .nav-top .nav-mobile #nav-toggle {
+  /* PUNTO 4 */
+  display: inline-block;
+  position: unset;
+}
+
+.navigation-top .container .nav-top .nav-list {
+  padding-right: 15px;
+  padding-left: 15px;
+  background: #222;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.navigation-top .container .nav-top .nav-list li ul li ul li {
+  right: -100%;
+  width: 100px;
+}
+
+.navigation-top .container .nav-top .nav-list li a {
+  background: #262626;
+  color: #9d9d9d;
+}
+
+.navigation-top .container .nav-top .nav-list li a:hover, .navigation-top .container .nav-top .nav-list li a:focus {
+  background: #323232;
+  color: #25b7d3;
+}

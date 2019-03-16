@@ -1,0 +1,366 @@
+@charset "UTF-8";
+/* -------------------------
+		CANASTA MODAL ANIMADA
+	 ------------------------- */
+.modal-bag {
+  width: 325px;
+  min-height: 255px;
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.6s;
+  transition: max-height 0.6s;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: -2px 2px 4px 0 rgba(45, 45, 45, 0.14);
+}
+
+.modal-bag::before {
+  content: "";
+  width: 0;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 11px solid #eee;
+  position: absolute;
+  top: -11px;
+  right: 5.95px;
+  transition: opacity 0.6s;
+  transition-delay: 0.25s;
+  z-index: 1;
+}
+
+.modal-bag.modal-visible {
+  /* Clase para mostrar el modal */
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.modal-bag .modal-bag-box3 {
+  display: flex;
+  flex-direction: column;
+  /* Mensaje appendado solo al comprar */
+  /* Contenedor del producto */
+  /* Pie del modal */
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  /* "My bag, 4 items" */
+  /* Modal ícono ❌*/
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-header .modal-bag-title {
+  padding-left: 1em;
+  align-self: center;
+  font-size: 15px;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-header .modal-bag-title .span-item {
+  font-weight: 800;
+  margin-right: 1ex;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-header .modal-bag-close {
+  color: #2d2d2d;
+  cursor: pointer;
+  margin: 2px;
+  padding: 0 12px;
+  font-size: 3em;
+  transition: color 0s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-header .modal-bag-close span {
+  transition: color 0s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-header .modal-bag-close:hover {
+  color: #0770cf;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-msg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+  background: #cceede;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-msg .glyphicon-ok-circle {
+  position: relative;
+  top: -1.5px;
+  color: #1bb36c;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-msg .msg-label {
+  padding-left: 1em;
+  font-size: 1.15rem;
+  letter-spacing: 0.4px;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main {
+  position: relative;
+  padding: 1em 0;
+  margin: 0 1em;
+  /* Imagen del producto*/
+  /* Lista de detalles del producto */
+  /* Precio */
+  /* Detalles: Color/ tamaño/ cantidad */
+  /* Ícono borrar 🗑 */
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .slideUp-layer {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  max-height: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  margin-right: -1em;
+  margin-left: -1em;
+  transition: max-height 0.2s linear 2s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .slideUp-layer.slide {
+  max-height: 100%;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main::before {
+  content: "Item borrado";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main.msg-animation::before {
+  animation: fontSize 1.4s ease-in-out 0.4s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ddd;
+  margin-right: -1em;
+  margin-left: -1em;
+  transform: translateX(100%);
+  transition: transform 1s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main.layer-animation::after {
+  transform: translateX(0);
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main dl dd {
+  transition: color 0s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main:hover dl dd {
+  color: #0770cf !important;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main a {
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+  background: #fff;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .product-img {
+  width: 109px;
+  align-self: flex-start;
+  margin-right: 1em;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main dl {
+  margin-bottom: 1.125em;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .product-price {
+  font-weight: 900;
+  line-height: 20px;
+  margin-bottom: 0.375em;
+  /* Precio ahora */
+  /* Precio antes */
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .product-price:nth-child(1) {
+  color: #d01345;
+  margin-bottom: 0;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .product-price:nth-child(2) {
+  font-size: 11px;
+  line-height: 1em;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .product-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .product-info dd {
+  flex: 1 0 auto;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .delete-item {
+  position: absolute;
+  bottom: 0.2rem;
+  right: -0.7rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .delete-item .glyphicon-trash {
+  font-size: 1.3em;
+  color: #000;
+  transition: color 0s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .delete-item .glyphicon-trash::before {
+  transition: color 0s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-body .modal-bag-main .delete-item .glyphicon-trash:hover {
+  color: #d01345;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer {
+  background-color: #eee;
+  /* Botones View Bag/ Checkout */
+  /* "Free delivery Worlwide*" */
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .sub-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  font-size: 1.5rem;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .modal-bag-buttons {
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .modal-bag-buttons .product-action {
+  display: inline-block;
+  padding: 3px 12px;
+  border: 2px solid #ddd;
+  width: calc(50% - 6px);
+  height: 44px;
+  text-align: center;
+  letter-spacing: 0.8px;
+  line-height: 30px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .modal-bag-buttons .view-bag {
+  margin-right: 6px;
+  color: #2d2d2d;
+  background-color: #fff;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .modal-bag-buttons .view-bag:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .modal-bag-buttons .checkout {
+  margin-left: 6px;
+  color: #fff;
+  background-color: #00aa5b;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .modal-bag-buttons .checkout:hover {
+  background-color: #006e3b;
+  cursor: pointer;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .extra-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  /* "More info here" */
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .extra-info span {
+  display: block;
+  padding: 3px 12px;
+  font-size: 1.3rem;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .extra-info a {
+  display: inline-block;
+  padding: 0;
+  line-height: 1;
+  color: #000;
+  background: unset;
+  text-decoration: underline;
+  transition: all 0s;
+}
+
+.modal-bag .modal-bag-box3 .modal-bag-footer .extra-info a:hover {
+  color: #0770cf;
+  cursor: pointer;
+}
+
+/* -------------------------
+	ANIMACIÓN AL BORRAR UN ITEM
+	 ------------------------- */
+/* Como recomendación ya que las animaciones no se anidan podrían tener su propia hoja de estilos para un mayor orden */
+@keyframes fontSize {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.7, 0.7);
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  100% {
+    visibility: visible;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7, 0.7);
+  }
+}

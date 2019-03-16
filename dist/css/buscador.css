@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* -------------------------
+			BUSCADOR ANIMADO
+	 ------------------------- */
+.menu-bar {
+  /* Contenedor tanto de la barra de búsqueda, como el icono del usuario y la canasta */
+}
+
+.menu-bar .buscador {
+  width: unset;
+  height: 50px;
+  flex-grow: 1;
+  position: relative;
+  top: unset;
+  right: unset;
+  /* Input del buscador */
+  /* Notará que aquí cambie ciertas propiedades respecto al trabajo original,
+	  	el anterior buscador se desalienaba por unos cuantos pixeles, cambio necesario */
+  /* Ícono 🔍 */
+}
+
+.menu-bar .buscador .form-control {
+  border: 2px solid #000;
+}
+
+.menu-bar .buscador .mysearchinput {
+  width: 100%;
+  height: 30px;
+  min-width: 30px;
+  max-width: 0;
+  padding: 0 13px;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: 0;
+  border-radius: 10px;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: all 0.5s, max-width 0.5s cubic-bezier(0, 0.795, 0, 1), border 0.75s ease-out;
+  /* Animación multicolor del borde (quitar la propiedad animation si no desea el cambio de colores de borde infinito)*/
+  /* Al hacer click en el input */
+  /* "¿Qué estás buscando?" */
+}
+
+.menu-bar .buscador .mysearchinput:focus {
+  max-width: calc(100% - 15px);
+  top: 50%;
+  z-index: 1;
+  opacity: 1;
+  cursor: text;
+  padding-right: 30px;
+  border-color: #ccc;
+  animation: glowingBorder 2.5s ease infinite alternate;
+}
+
+.menu-bar .buscador .mysearchinput::placeholder {
+  font-weight: 500;
+  color: #bbb;
+  opacity: 0;
+  padding-left: 100%;
+}
+
+.menu-bar .buscador .mysearchinput:focus::placeholder {
+  opacity: 1;
+  padding-left: 0;
+  transition: all 0.5s ease, opacity 0s;
+}
+
+.menu-bar .buscador a {
+  float: unset !important;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  background: unset;
+  cursor: pointer;
+  text-decoration: none;
+  transform: translateY(-50%);
+  transition: none;
+  /* Ícono ❌ */
+}
+
+.menu-bar .buscador a:hover {
+  background: unset;
+}
+
+.menu-bar .buscador a.change-style {
+  background: unset;
+  border: none;
+  animation: spin 0.5s ease;
+}
+
+.menu-bar .buscador i {
+  position: relative;
+  top: 0;
+  float: unset;
+  font-size: 20px;
+  color: #000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: unset;
+}
+
+.menu-bar .buscador i:hover {
+  background: unset;
+}
+
+.menu-bar .buscador i.change-icon::before {
+  color: #888;
+  /* ❌ multicolor infinito  */
+  font-size: 0.6em;
+  animation: glowingColor 2.5s ease infinite alternate;
+}
+
+.menu-bar .buscador i:not(.change-icon)::before {
+  /*transition: all 0s;*/
+  /* Comentar/descomentar para cambiar ligeramente la animación de la lupa al cerrar el buscador */
+}
+
+/* -------------------------
+		ANIMACIONES
+	 ------------------------- */
+/* Como recomendación ya que las animaciones no se anidan podrían tener su propia hoja de estilos para un mayor orden */
+/* ❌ giro */
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotateZ(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotateZ(180deg);
+  }
+}
+
+/* Animaciones de color sincronizadas para el buscador */
+/* Borde del input */
+@keyframes glowingBorder {
+  0% {
+    border-color: #a5a5a5;
+  }
+  25% {
+    border-color: #D800A2;
+  }
+  50% {
+    border-color: #FD9900;
+  }
+  75% {
+    border-color: #D90303;
+  }
+  100% {
+    border-color: #009A9A;
+  }
+}
+
+/* ❌ multicolor */
+@keyframes glowingColor {
+  0% {
+    color: #a5a5a5;
+  }
+  25% {
+    color: #d800a2;
+  }
+  50% {
+    color: #fd9900;
+  }
+  75% {
+    color: #d90303;
+  }
+  100% {
+    color: #009a9a;
+  }
+}

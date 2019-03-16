@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* -------------------------
+		NAVEGACIÓN SECCIÓN 2
+	 ------------------------- */
+.navigation-sub {
+  background: #f8f8f8;
+  z-index: 99;
+  margin-top: 50px; }
+  .navigation-sub.default {
+    width: 100%;
+    position: absolute; }
+  .navigation-sub.fixed {
+    position: fixed;
+    margin-top: 50px;
+    width: 100%;
+    background: #f8f8f8;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.4); }
+  .navigation-sub .container .nav-sub {
+    float: left;
+    width: 100%; }
+    .navigation-sub .container .nav-sub .nav-dropdown {
+      position: absolute;
+      top: 50px; }
+  .navigation-sub .container .menu-bar {
+    /* Contenedor tanto de la barra de búsqueda, como el icono del usuario y la canasta */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    background: #f8f8f8; }
+    .navigation-sub .container .menu-bar .nav-list {
+      display: flex;
+      /* No necesario si cambia el orden de los iconos en el HTML */
+      flex-direction: row-reverse;
+      padding-left: 15px;
+      padding-right: 15px;
+      /* Ícono 👜 */ }
+      .navigation-sub .container .menu-bar .nav-list #update-cart-icon {
+        position: relative; }
+  .navigation-sub nav div ul li.pull-right a {
+    display: block;
+    padding: 0 15px;
+    line-height: 50px;
+    background: #f8f8f8;
+    color: #fff;
+    text-decoration: none;
+    color: #222; }
+    .navigation-sub nav div ul li.pull-right a:hover {
+      background: #dedede; }
