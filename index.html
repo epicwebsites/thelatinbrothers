@@ -23,11 +23,23 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,900,700italic,600italic,600,400italic,700,300italic,300,200italic,200">
 
     <link rel="stylesheet" href="dist/css/mycss/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/css/mycss/headerAndfoot.css">
+    <!-- <link rel="stylesheet" href="dist/css/mycss/headerAndfoot.css"> -->
     <link rel="stylesheet" href="dist/css/mycss/style.css">
     <!-- CHRISTOPHER -->
-    <link rel="stylesheet" href="dist/css/mycss/headerAndfootv2.css">
-    <script src="dist/js/myJs/christopher.js"></script>
+    <!-- <link rel="stylesheet" href="dist/css/css/christopher2.css"> -->
+    <!-- <link rel="stylesheet" href="dist/css/css/christopher3.css"> -->
+    <link rel="stylesheet" href="dist/css/css/navbar-menu.css">
+    <link rel="stylesheet" href="dist/css/css/navbar-top.css">
+    <link rel="stylesheet" href="dist/css/css/navbar-sub.css">
+    <link rel="stylesheet" href="dist/css/css/buscador.css">
+    <link rel="stylesheet" href="dist/css/css/canasta.css">
+    <link rel="stylesheet" href="dist/css/css/footer.css">
+    <!-- <script src="dist/js/myJs/christopher.js"></script> -->
+    <script src="dist/js/myJs/navbar-top.js"></script>
+    <script src="dist/js/myJs/navbar-sub.js"></script>
+    <script src="dist/js/myJs/buscador.js"></script>
+    <script src="dist/js/myJs/canasta.js"></script>
+    <script src="dist/js/myJs/footer.js"></script>
     <!--  -->
 
 
@@ -552,11 +564,12 @@
     <div class="container top100">
 
         <nav class="nav-sub">
-            <div id="menu-bar">
-                <div id="buscador">
+            <div class="menu-bar">
+                <div class="buscador">
                     <input id="mysearchinput" type="text" class="form-control mysearchinput" placeholder="¿Qué estás buscando?">
                     <a class="pull-right"><i class="glyphicon glyphicon-search"></i></a>
                 </div>
+
 
 
 
@@ -602,34 +615,86 @@
 
                         <!-- ################################################################################# -->
                         <!-- CHRISTOPHER | Modal de compra -->
-                        <div id="modal-bag">
-                          <div id="modal-bag-box">
-                            <div id="modal-bag-box2">
-                              <div id="modal-bag-box3">
-                                <div id="modal-bag-header">
-                                  <div id="modal-bag-title"><span class="span-item">My bag,</span><span>4 items</span></div>
-                                  <div id="modal-bag-close"><span>&times;</span></div>
+                        <div class="modal-bag">
+                          <div class="modal-bag-box">
+                            <div class="modal-bag-box2">
+                              <div class="modal-bag-box3">
+                                <div class="modal-bag-header">
+                                  <div class="modal-bag-title">
+                                    <span class="span-item">My bag,</span>
+                                    <span>4 items</span>
+                                  </div>
+                                  <div class="modal-bag-close">
+                                    <span>&times;</span>
+                                  </div>
                                 </div>
-                                <div id="modal-bag-body">
-                                    <div id="modal-bag-main"><a><img class="product-img" src="https://images.asos-media.com/products/nike-hypercharge-straw-black-water-bottle/9021121-1-black?$l$" alt="Black Water Bottle"/>
-                                        <dl>
-                                          <dd class="product-price">$21.32</dd>
-                                          <dd class="product-price">$26.84</dd>
-                                          <dd>Nike Hypercharge Straw Black Water Bottle</dd>
-                                          <div class="product-info">
-                                            <dd>Black</dd>
-                                            <dd>No Size</dd>
-                                            <dd>Qty: 4</dd>
-                                          </div>
-                                        </dl>
-                                        <button class="delete-item"><i class="glyphicon glyphicon-trash"></i></button></a>
+                                <div class="modal-bag-body">
+                                    <div class="modal-bag-main">
+                                        <a>
+                                            <img class="product-img" src="https://images.asos-media.com/products/nike-hypercharge-straw-black-water-bottle/9021121-1-black?$l$" alt="Black Water Bottle"/>
+                                            <dl>
+                                              <dd class="product-price">$21.32</dd>
+                                              <dd class="product-price">$26.84</dd>
+                                              <dd>Nike Hypercharge Straw Black Water Bottle</dd>
+                                              <div class="product-info">
+                                                <dd>Black</dd>
+                                                <dd>No Size</dd>
+                                                <dd>Qty: 4</dd>
+                                              </div>
+                                            </dl>
+                                            <button class="delete-item"><i class="glyphicon glyphicon-trash"></i></button>
+                                        </a>
+                                        <div class='slideUp-layer'></div>
+                                    </div>
+                                    <div class="modal-bag-main">
+                                        <a>
+                                            <img class="product-img" src="https://images.asos-media.com/products/nike-hypercharge-straw-black-water-bottle/9021121-1-black?$l$" alt="Black Water Bottle"/>
+                                            <dl>
+                                              <dd class="product-price">$21.32</dd>
+                                              <dd class="product-price">$26.84</dd>
+                                              <dd>Nike Hypercharge Straw Black Water Bottle</dd>
+                                              <div class="product-info">
+                                                <dd>Black</dd>
+                                                <dd>No Size</dd>
+                                                <dd>Qty: 4</dd>
+                                              </div>
+                                            </dl>
+                                            <button class="delete-item"><i class="glyphicon glyphicon-trash"></i></button>
+                                        </a>
+                                        <div class='slideUp-layer'></div>
+                                    </div>
+                                    <div class="modal-bag-main">
+                                        <a>
+                                            <img class="product-img" src="https://images.asos-media.com/products/nike-hypercharge-straw-black-water-bottle/9021121-1-black?$l$" alt="Black Water Bottle"/>
+                                            <dl>
+                                              <dd class="product-price">$21.32</dd>
+                                              <dd class="product-price">$26.84</dd>
+                                              <dd>Nike Hypercharge Straw Black Water Bottle</dd>
+                                              <div class="product-info">
+                                                <dd>Black</dd>
+                                                <dd>No Size</dd>
+                                                <dd>Qty: 4</dd>
+                                              </div>
+                                            </dl>
+                                            <button class="delete-item"><i class="glyphicon glyphicon-trash"></i></button>
+                                        </a>
+                                        <div class='slideUp-layer'></div>
                                     </div>
                                 </div>
 
-                                <div id="modal-bag-footer">
-                                  <div id="sub-total"><span>Sub-total</span><span>$85.28</span></div>
-                                  <div id="modal-bag-buttons"><a class="product-action" id="view-bag">View Bag</a><a class="product-action" id="checkout">Checkout</a></div>
-                                  <div id="extra-info"><span>Free Delivery WorlWide*</span><span>More info <a>here</a></span></div>
+                                <div class="modal-bag-footer">
+                                    <div class="sub-total">
+                                        <span>Sub-total</span>
+                                        <span>$85.28</span>
+                                    </div>
+                                    <div class="modal-bag-buttons">
+                                        <a class="product-action view-bag">View Bag</a>
+                                        <a class="product-action checkout">Checkout</a>
+                                    </div>
+                                    <div class="extra-info">
+                                        <span>Free Delivery WorlWide*</span>
+                                        <span>More info <a>here</a></span>
+                                    </div>
                                 </div>
                               </div>
                             </div>
