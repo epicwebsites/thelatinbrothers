@@ -6,65 +6,65 @@ $(document).ready(function () {
     /*	DROPDOWN MENU
     /*-----------------------------------------------------------------------------------*/
     $('nav ul li a:not(:only-child)').click(function (e) {
-        $(this).siblings('.nav-dropdown').toggle();
+        // $(this).siblings('.nav-dropdown').toggle();
         // Close one dropdown when selecting another
-        $('.nav-dropdown').not($(this).siblings()).hide();
-        e.stopPropagation();
+        // $('.nav-dropdown').not($(this).siblings()).hide();
+        // e.stopPropagation();
     });
     // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function () {
-        $('.nav-dropdown').hide();
-    });
+    // $('html').click(function () {
+    //     $('.nav-dropdown').hide();
+    // });
     // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function () {
-        $('nav.nav-top ul').slideToggle();
-    });
+    // $('#nav-toggle').click(function () {
+    //     $('nav.nav-top ul').slideToggle();
+    // });
     // Hamburger to X toggle
-    $('#nav-toggle').on('click', function () {
-        this.classList.toggle('active');
-    });
+    // $('#nav-toggle').on('click', function () {
+    //     this.classList.toggle('active');
+    // });
 
-    $('.navigation .nav-top .nav-list li, .navigation .nav-sub .nav-list li').hover(function () {
-        $(this).children('.nav-dropdown').stop(true, true).delay(0).fadeIn(0);
-    }, function () {
-        $(this).children('.nav-dropdown').stop(true, true).delay(0).fadeOut(0);
-    });
+    // $('.navigation .nav-top .nav-list li, .navigation .nav-sub .nav-list li').hover(function () {
+    //     $(this).children('.nav-dropdown').stop(true, true).delay(0).fadeIn(0);
+    // }, function () {
+    //     $(this).children('.nav-dropdown').stop(true, true).delay(0).fadeOut(0);
+    // });
 
     /*-----------------------------------------------------------------------------------*/
     /*	STICKY HEADER TOP --> NAVBAR & NAVBARSUB
     /*-----------------------------------------------------------------------------------*/
-    var menu = $('.navigation'),
-        pos = menu.offset();
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > pos.top + menu.height() && menu.hasClass('default') && $(this).scrollTop() > 100) {
-            menu.fadeOut('fast', function () {
-                $(this).removeClass('default').addClass('fixed').fadeIn('fast');
-            });
-            $('body .container').addClass('top100').fadeIn(0);
-            $('body .container-fluid').addClass('top100').fadeIn(0);
-        } else if ($(this).scrollTop() <= pos.top + 100 && menu.hasClass('fixed')) {
-            menu.fadeOut(0, function () {
-                $(this).removeClass('fixed').addClass('default').fadeIn(0);
-            });
-        }
-    });
+    // var menu = $('.navigation'),
+    //     pos = menu.offset();
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > pos.top + menu.height() && menu.hasClass('default') && $(this).scrollTop() > 100) {
+    //         menu.fadeOut('fast', function () {
+    //             $(this).removeClass('default').addClass('fixed').fadeIn('fast');
+    //         });
+    //         $('body .container').addClass('top100').fadeIn(0);
+    //         $('body .container-fluid').addClass('top100').fadeIn(0);
+    //     } else if ($(this).scrollTop() <= pos.top + 100 && menu.hasClass('fixed')) {
+    //         menu.fadeOut(0, function () {
+    //             $(this).removeClass('fixed').addClass('default').fadeIn(0);
+    //         });
+    //     }
+    // });
 
     /*-----------------------------------------------------------------------------------*/
     /*	STICKY HEADER TOP
     /*-----------------------------------------------------------------------------------*/
-    var menuSub = $('.navigation-sub'),
-        posSub = menuSub.offset();
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > posSub.top + menuSub.height() && menuSub.hasClass('default') && $(this).scrollTop() > 100) {
-            menuSub.fadeOut('fast', function () {
-                $(this).removeClass('default').addClass('fixed').fadeIn('fast');
-            });
-        } else if ($(this).scrollTop() <= pos.top + 100 && menuSub.hasClass('fixed')) {
-            menuSub.fadeOut(0, function () {
-                $(this).removeClass('fixed').addClass('default').fadeIn(0);
-            });
-        }
-    });
+    // var menuSub = $('.navigation-sub'),
+    //     posSub = menuSub.offset();
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > posSub.top + menuSub.height() && menuSub.hasClass('default') && $(this).scrollTop() > 100) {
+    //         menuSub.fadeOut('fast', function () {
+    //             $(this).removeClass('default').addClass('fixed').fadeIn('fast');
+    //         });
+    //     } else if ($(this).scrollTop() <= pos.top + 100 && menuSub.hasClass('fixed')) {
+    //         menuSub.fadeOut(0, function () {
+    //             $(this).removeClass('fixed').addClass('default').fadeIn(0);
+    //         });
+    //     }
+    // });
 
     // $(".carousel").swipe({
     //     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -77,20 +77,20 @@ $(document).ready(function () {
 
     // let cat1 = 'home-rum';
     // let cat2 = 'home-pisco';
-    //
+    
     // let current = 0,
     //     slides = document.getElementsByClassName(cat1);
-    //
+    
     // setInterval(function() {
     //     for (let i = 0; i < slides.length; i++) {
     //         slides[i].style.opacity = 0;
     //     }
     //     current = (current !== slides.length - 1) ? current + 1 : 0;
     //     slides[current].style.opacity = 1;
-    //
+    
     // }, 12000);
-    //
-    //
+    
+    
     // let current2 = 0,
     // slides2 = document.getElementsByClassName(cat2);
     // setInterval(function() {
@@ -99,7 +99,7 @@ $(document).ready(function () {
     //     }
     //     current2 = (current2 !== slides2.length - 1) ? current2 + 1 : 0;
     //     slides2[current2].style.opacity = 1;
-    //
+    
     // }, 12000);
 
     /***********************************************/
